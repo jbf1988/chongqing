@@ -61,7 +61,7 @@ option = {
 		orient:'vertical',
 	    left:'28%',
 		bottom:'10%',
-        data: ['水面来水', '路面来水','污水','沉积物']
+        data: ['水面来水', '路面来水','污水','沉积物','污水比例']
     },
     grid: [{
         top: 50,
@@ -84,15 +84,33 @@ option = {
     }],
     yAxis:  [{
         type: 'value',
-		gridIndex: 0
+		gridIndex: 0,
+		position:'left'
     },
 	{
         type: 'value',
-		gridIndex: 1
+		gridIndex: 1,
+		position:'left'
     },
 	{
         type: 'value',
 		gridIndex: 2
+    },
+	{
+        type: 'value',
+		gridIndex: 0,
+		position:'right',
+	    axisLabel: {
+                formatter: '{value} %'
+            }
+    },
+	{
+        type: 'value',
+		gridIndex: 1,
+		position:'right',
+	    axisLabel: {
+                formatter: '{value} %'
+            }
     }],
     xAxis: [{
         type: 'category',
@@ -113,34 +131,42 @@ option = {
     series: [
         {
             name: '水面来水',
-            type: 'line',
+            type: 'bar',
             stack: '盘溪河水量',
-            areaStyle: {normal: {}},
+            itemStyle: {normal: {opacity:0.8}},
 			xAxisIndex: 0,
             yAxisIndex: 0,
             data: [2.27, 2.71, 5.88, 8.14, 12.21, 12.66, 14.46, 14.02, 7.69, 4.98, 3.17, 2.27]
         },
         {
             name: '路面来水',
-            type: 'line',
+            type: 'bar',
             stack: '盘溪河水量',
-            areaStyle: {normal: {}},
+            itemStyle: {normal: {opacity:0.8}},
 			xAxisIndex: 0,
             yAxisIndex: 0,
             data: [27.79, 25.87, 47.73, 86.95, 136.38, 173.43, 291.25, 176.17, 230.6, 156.56, 76.12, 39.43]
         },
         {
             name: '污水',
-            type: 'line',
+            type: 'bar',
             stack: '盘溪河水量',
-            areaStyle: {normal: {}},
+            itemStyle: {normal: {opacity:0.8}},
 			xAxisIndex: 0,
             yAxisIndex: 0,			
             data: [43.5, 43.5, 43.5, 43.5, 43.5, 43.5, 43.5, 43.5, 43.5, 43.5, 43.5, 43.5]
-        }, {
+        }, 
+        {
+            name: '污水比例',
+            type: 'line',
+			xAxisIndex: 0,
+            yAxisIndex: 3,			
+            data: [59.14, 60.35, 44.79, 31.39, 22.65, 18.95, 12.46, 18.61, 15.44, 21.22, 35.43, 51.06]
+        }, 		
+		{
         type: 'pie',
 		radius:[0,'20%'],
-        center: ['32%', '20%'],
+        center: ['33%', '20%'],
         data: [{name:'水面来水',value:7.54},
 			   {name:'路面来水',value:122.36},
 			   {name:'污水',value:43.50}],
@@ -152,44 +178,51 @@ option = {
 		},
 	        {
             name: '水面来水',
-            type: 'line',
+            type: 'bar',
             stack: '盘溪河负荷',
-            areaStyle: {normal: {}},
+            itemStyle: {normal: {opacity:0.8}},
 			xAxisIndex: 1,
             yAxisIndex: 1,
             data: [0.45, 0.54, 1.18, 1.63, 2.44, 2.53, 2.89, 2.8, 1.54, 1.0, 0.63, 0.45]
         },
         {
             name: '路面来水',
-            type: 'line',
+            type: 'bar',
             stack: '盘溪河负荷',
-            areaStyle: {normal: {}},
+            itemStyle: {normal: {opacity:0.8}},
 			xAxisIndex: 1,
             yAxisIndex: 1,
             data: [27.79, 25.87, 47.73, 86.95, 136.38, 173.43, 291.25, 176.17, 230.6, 156.56, 76.12, 39.43]
         },
         {
             name: '污水',
-            type: 'line',
+            type: 'bar',
             stack: '盘溪河负荷',
-            areaStyle: {normal: {}},
+            itemStyle: {normal: {opacity:0.8}},
 			xAxisIndex: 1,
             yAxisIndex: 1,			
             data: [139.2, 139.2, 139.2, 139.2, 139.2, 139.2, 139.2, 139.2, 139.2, 139.2, 139.2, 139.2]
         },
 		{
             name: '沉积物',
-            type: 'line',
+            type: 'bar',
             stack: '盘溪河负荷',
-            areaStyle: {normal: {}},
+            itemStyle: {normal: {opacity:0.8}},
 			xAxisIndex: 1,
             yAxisIndex: 1,			
             data: [25.22, 25.22, 25.22, 25.22, 25.22, 25.22, 25.22, 25.22, 25.22, 25.22, 25.22, 25.22]
         },
+        {
+            name: '污水比例',
+            type: 'line',
+			xAxisIndex: 1,
+            yAxisIndex: 4,			
+            data: [72.25, 72.95, 65.25, 55.02, 45.91, 40.9, 30.36, 40.54, 35.1, 43.23, 57.72, 68.13]
+        },
 		{
         type: 'pie',
 		radius:[0,'20%'],
-        center: ['32%', '53%'],
+        center: ['33%', '53%'],
         data: [{name:'水面来水',value:1.51},
 			   {name:'路面来水',value:122.36},
 			   {name:'污水',value:139.20},
