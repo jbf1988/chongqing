@@ -3,7 +3,7 @@
    <head>
        <meta charset="utf-8">
    </head>
-   <body style="height: 100%;width:50%; margin: 0">
+   <body style="height: 550px;width:900px; margin: 0">
        <div id="container" style="height: 100%"></div>
        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
@@ -59,27 +59,27 @@ option = {
 	],
     legend: {
 		orient:'vertical',
-	    left:'56%',
-		bottom:'10%',
+	    left:440,
+		bottom:35,
         data: ['水面来水', '路面来水','污水','沉积物','污水比例']
     },
     grid: [{
         top: 50,
-        width: '44%',
-        bottom: '67%',
+        width: 350,
+        height: 140,
         left: 35,
         containLabel: true
     }, {
-        top: '39%',
-        width: '44%',
-        bottom: '35%',
+        top: 220,
+        width: 350,
+        height: 140,
         left: 35,
         containLabel: true
     }, {
-        top: '70%',
-        width: '44%',
-        bottom: '1%',
-        left: 35,
+        top: 390,
+        width: 350,
+        height: 140,
+        left: 20,
         containLabel: true
     }],
     yAxis:  [{
@@ -108,6 +108,8 @@ option = {
         type: 'value',
 		gridIndex: 1,
 		position:'right',
+		min:30,
+		max:80,
 	    axisLabel: {
                 formatter: '{value} %'
             }
@@ -165,8 +167,8 @@ option = {
         }, 		
 		{
         type: 'pie',
-		radius:[0,'20%'],
-        center: ['66%', '20%'],
+		radius:[0,50],
+        center: [480, 120],
         data: [{name:'水面来水',value:7.54},
 			   {name:'路面来水',value:122.36},
 			   {name:'污水',value:43.50}],
@@ -221,8 +223,8 @@ option = {
         },
 		{
         type: 'pie',
-		radius:[0,'20%'],
-        center: ['66%', '53%'],
+		radius:[0,50],
+        center: [480, 290],
         data: [{name:'水面来水',value:1.51},
 			   {name:'路面来水',value:122.36},
 			   {name:'污水',value:139.20},
