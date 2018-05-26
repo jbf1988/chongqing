@@ -59,27 +59,27 @@ option = {
 	],
     legend: {
 		orient:'vertical',
-	    left:'56%',
-		bottom:'10%',
+	    left:440,
+		bottom:35,
         data: ['水面来水', '路面来水','污水','沉积物','污水比例']
     },
     grid: [{
         top: 50,
-        width: '44%',
-        bottom: '67%',
+        width: 350,
+        height: 140,
         left: 35,
         containLabel: true
     }, {
-        top: '39%',
-        width: '44%',
-        bottom: '35%',
+        top: 220,
+        width: 350,
+        height: 140,
         left: 35,
         containLabel: true
     }, {
-        top: '70%',
-        width: '44%',
-        bottom: '1%',
-        left: 35,
+        top: 390,
+        width: 350,
+        height: 140,
+        left: 20,
         containLabel: true
     }],
     yAxis:  [{
@@ -90,6 +90,9 @@ option = {
 	{
         type: 'value',
 		gridIndex: 1,
+		splitNumber:5,
+		min:0,
+		max:600,
 		position:'left'
     },
 	{
@@ -108,6 +111,8 @@ option = {
         type: 'value',
 		gridIndex: 1,
 		position:'right',
+		min:30,
+		max:90,
 	    axisLabel: {
                 formatter: '{value} %'
             }
@@ -165,8 +170,8 @@ option = {
         }, 		
 		{
         type: 'pie',
-		radius:[0,'20%'],
-        center: ['66%', '20%'],
+		radius:[0,50],
+        center: [480, 120],
         data: [{name:'水面来水',value:1.83},
 			   {name:'路面来水',value:115.67},
 			   {name:'污水',value:48.20}],
@@ -221,8 +226,8 @@ option = {
         },
 		{
         type: 'pie',
-		radius:[0,'20%'],
-        center: ['66%', '53%'],
+		radius:[0,50],
+        center: [480, 290],
         data: [{name:'水面来水',value:0.37},
 			   {name:'路面来水',value:115.67},
 			   {name:'污水',value:223.87},
