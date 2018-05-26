@@ -3,7 +3,7 @@
    <head>
        <meta charset="utf-8">
    </head>
-   <body style="height: 100%; margin: 0">
+   <body style="height: 100%;width:50%; margin: 0">
        <div id="container" style="height: 100%"></div>
        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
        <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
@@ -34,50 +34,50 @@ option = {
     title: [
 	{
         text: '清溪水水质-水量总体分析',
-        left: '22%',
+        left: '44%',
 		top: 0,
         textAlign: 'center'
     },
 	{
         text: '水量分析(单位：万m3)',
-        left: '12%',
+        left: '24%',
 		top: '4%',
         textAlign: 'center'
     },
 	{
         text: '污染负荷分析(单位：t)',
-        left: '12%',
+        left: '24%',
 		top: '35%',
         textAlign: 'center'
     },
 	{
         text: '水环境容量(单位：t)',
-        left: '12%',
+        left: '24%',
 		top: '66%',
         textAlign: 'center'
     }
 	],
     legend: {
 		orient:'vertical',
-	    left:'28%',
+	    left:'56%',
 		bottom:'10%',
         data: ['水面来水', '路面来水','污水','沉积物','污水比例']
     },
     grid: [{
         top: 50,
-        width: '22%',
+        width: '44%',
         bottom: '67%',
         left: 35,
         containLabel: true
     }, {
         top: '39%',
-        width: '22%',
+        width: '44%',
         bottom: '35%',
         left: 35,
         containLabel: true
     }, {
         top: '70%',
-        width: '22%',
+        width: '44%',
         bottom: '1%',
         left: 35,
         containLabel: true
@@ -166,7 +166,7 @@ option = {
 		{
         type: 'pie',
 		radius:[0,'20%'],
-        center: ['33%', '20%'],
+        center: ['66%', '20%'],
         data: [{name:'水面来水',value:1.83},
 			   {name:'路面来水',value:115.67},
 			   {name:'污水',value:48.20}],
@@ -222,7 +222,7 @@ option = {
 		{
         type: 'pie',
 		radius:[0,'20%'],
-        center: ['33%', '53%'],
+        center: ['66%', '53%'],
         data: [{name:'水面来水',value:0.37},
 			   {name:'路面来水',value:115.67},
 			   {name:'污水',value:223.87},
